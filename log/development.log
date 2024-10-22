@@ -1,162 +1,163 @@
-Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:42:00 +0000
-Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:37:24 +0000
+Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PagesController#home as HTML
   Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
   Rendering layout layouts/application.html.erb
   Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 553)
-  Rendered layout layouts/application.html.erb (Duration: 444.4ms | Allocations: 80794)
-Completed 200 OK in 460ms (Views: 449.6ms | ActiveRecord: 0.0ms | Allocations: 87192)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 709)
+  Rendered layout layouts/application.html.erb (Duration: 209.7ms | Allocations: 83803)
+Completed 200 OK in 229ms (Views: 214.2ms | ActiveRecord: 0.0ms | Allocations: 90217)
 
 
-Started GET "/about?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:42:10 +0000
+Started GET "/signups/new" for 165.225.204.244 at 2024-10-22 16:37:28 +0000
+Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SignupsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signups/new.html.erb within layouts/application
+  Rendered signups/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 5023)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 7013)
+Completed 200 OK in 27ms (Views: 19.4ms | ActiveRecord: 0.6ms | Allocations: 13410)
+
+
+Started POST "/signups" for 165.225.204.244 at 2024-10-22 16:37:31 +0000
 Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#about as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/about.html.erb within layouts/application
-  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 146)
-  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2061)
-Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2429)
+Processing by SignupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "signup"=>{"firstname"=>"", "email"=>""}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+  [1m[36mSignup Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "signups" WHERE "signups"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 5133)
 
 
-Started GET "/about?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:42:17 +0000
+  
+ActionController::Redirecting::UnsafeRedirectError (Unsafe redirect to "https://c65a809f07c644a9b01779bb57268ff8.enterprise.cc-propeller.cloudsignups/new", pass allow_other_host: true to redirect anyway.):
+  
+app/controllers/signups_controller.rb:13:in `create'
+Started GET "/signups?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:38:14 +0000
 Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#about as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/about.html.erb within layouts/application
-  Rendered pages/about.html.erb within layouts/application (Duration: 0.0ms | Allocations: 15)
-  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1930)
-Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2241)
-
-
-Started GET "/about?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:44:01 +0000
-Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#about as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/about.html.erb within layouts/application
-  Rendered pages/about.html.erb within layouts/application (Duration: 0.0ms | Allocations: 15)
-  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5880)
-Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 6191)
-
-
-Started GET "/about?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:45:57 +0000
-Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#about as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/about.html.erb within layouts/application
-  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
-  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2485)
-Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3479)
-
-
-Started GET "/about?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:46:41 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/signups"):
+  
+Started GET "/signups?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:38:15 +0000
 Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#about as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/about.html.erb within layouts/application
-  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 146)
-  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2476)
-Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3467)
-
-
-Started GET "/" for 165.225.204.244 at 2024-10-22 13:46:43 +0000
-Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#home as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 196)
-  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2154)
-Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2515)
-
-
-Started GET "/about" for 165.225.204.244 at 2024-10-22 13:46:47 +0000
-Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#about as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering pages/about.html.erb within layouts/application
-  Rendered pages/about.html.erb within layouts/application (Duration: 0.0ms | Allocations: 15)
-  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1973)
-Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2280)
-
-
-Started GET "/" for 165.225.204.244 at 2024-10-22 13:47:23 +0000
-Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#home as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 15)
-  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1973)
-Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2280)
-
-
-Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:48:10 +0000
-Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#home as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 171)
-  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2498)
-Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 3484)
-
-
-Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:48:10 +0000
-Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#home as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 15)
-  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1973)
-Completed 200 OK in 3ms (Views: 2.7ms | Allocations: 2278)
-
-
-Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:49:08 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/signups"):
+  
+Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:38:17 +0000
 Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
 Processing by PagesController#home as HTML
   Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
   Rendering layout layouts/application.html.erb
   Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 240)
-  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2538)
-Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 3524)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2165)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2925)
 
 
-Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:49:23 +0000
+Started GET "/signups/new" for 165.225.204.244 at 2024-10-22 16:38:20 +0000
+Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SignupsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/signups_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering signups/new.html.erb within layouts/application
+  Rendered signups/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 705)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2681)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.8ms | Allocations: 6121)
+
+
+Started POST "/signups" for 165.225.204.244 at 2024-10-22 16:38:22 +0000
+Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SignupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "signup"=>{"firstname"=>"", "email"=>""}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+  [1m[36mSignup Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "signups" WHERE "signups"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 4567)
+
+
+  
+NoMethodError (undefined method `new_url' for #<SignupsController:0x0000000000b090>):
+  
+app/controllers/signups_controller.rb:13:in `create'
+Started GET "/signups?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:38:59 +0000
+Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/signups"):
+  
+Started GET "/signups?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:38:59 +0000
+Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/signups"):
+  
+Started GET "/new?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:39:06 +0000
+Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/new?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:40:59 +0000
+Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 16:41:02 +0000
 Cannot render console from 10.20.10.137! Allowed networks: 127.0.0.0/127.255.255.255, ::1
 Processing by PagesController#home as HTML
   Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
   Rendering layout layouts/application.html.erb
   Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 238)
-  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2536)
-Completed 200 OK in 5ms (Views: 4.7ms | Allocations: 3524)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 6414)
+Completed 200 OK in 15ms (Views: 14.7ms | Allocations: 7173)
 
 
-Started GET "/?allowEmbedForCodecademy=false&allowCopyAndPasteForCodecademy=true&allowFileUploadForCodecademy=true&allowFileDownloadForCodecademy=true&allowExternalLinkForCodecademy=true&allowAICodeExplainForCodecademy=true&allowAIChatAssistantForCodecademy=true&allowAIErrorExplainForCodecademy=true" for 165.225.204.244 at 2024-10-22 13:50:08 +0000
-Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#home as HTML
-  Parameters: {"allowEmbedForCodecademy"=>"false", "allowCopyAndPasteForCodecademy"=>"true", "allowFileUploadForCodecademy"=>"true", "allowFileDownloadForCodecademy"=>"true", "allowExternalLinkForCodecademy"=>"true", "allowAICodeExplainForCodecademy"=>"true", "allowAIChatAssistantForCodecademy"=>"true", "allowAIErrorExplainForCodecademy"=>"true"}
-  Rendering layout layouts/application.html.erb
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 278)
-  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2576)
-Completed 200 OK in 6ms (Views: 4.8ms | Allocations: 3563)
-
-
-Started GET "/about" for 165.225.204.244 at 2024-10-22 13:50:15 +0000
+Started GET "/signups/new" for 165.225.204.244 at 2024-10-22 16:41:05 +0000
 Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
-Processing by PagesController#about as HTML
+Processing by SignupsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/signups_controller.rb:4:in `new'
   Rendering layout layouts/application.html.erb
-  Rendering pages/about.html.erb within layouts/application
-  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 145)
-  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2113)
-Completed 200 OK in 3ms (Views: 3.1ms | Allocations: 2473)
+  Rendering signups/new.html.erb within layouts/application
+  Rendered signups/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 705)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2684)
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 6106)
 
 
+Started POST "/signups" for 165.225.204.244 at 2024-10-22 16:41:17 +0000
+Cannot render console from 10.20.12.246! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SignupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "signup"=>{"firstname"=>"erwan", "email"=>"erwan@erwan.fr"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+  [1m[36mSignup Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "signups" WHERE "signups"."email" = ? LIMIT ?[0m  [["email", "erwan@erwan.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("firstname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["firstname", "erwan"], ["email", "erwan@erwan.fr"], ["created_at", "2024-10-22 16:41:17.806603"], ["updated_at", "2024-10-22 16:41:17.806603"]]
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/signups_controller.rb:10:in `create'
+Redirected to https://c65a809f07c644a9b01779bb57268ff8.enterprise.cc-propeller.cloud/success
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms | Allocations: 3886)
+
+
+Started GET "/success" for 165.225.204.244 at 2024-10-22 16:41:17 +0000
+Cannot render console from 10.20.11.86! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SignupsController#success as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering signups/success.html.erb within layouts/application
+  Rendered signups/success.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2147)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSignup Load (0.1ms)[0m  [1m[34mSELECT "signups".* FROM "signups"[0m
