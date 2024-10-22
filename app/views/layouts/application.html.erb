@@ -14,7 +14,24 @@
   </head>
 
   <body>
+      <!-- Navigation Menu -->
+    <div id="navMenu" class="nav-menu">
+        <span class="close-btn" onclick="closeNav()">&times;</span>
+       <%= link_to "Home", root_path %>
+        <a href="#supporting">Our Journey</a>
+        <a href="#discover">Discover Stories</a>
+        <a href="#footer">Contact Us</a>
+        <%= link_to "About", about_path %>
+    </div>
+
+    <!-- Button to open the navigation menu -->
+    <button class="open-btn" onclick="openNav()">&#9776;</button>
+    
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Stories. All rights reserved. Let your story be heard.</p>
+    </footer>
   </body>
 </html>

@@ -1,21 +1,11 @@
-    <!-- Navigation Menu -->
-    <div id="navMenu" class="nav-menu">
-        <span class="close-btn" onclick="closeNav()">&times;</span>
-        <a href="#main">Home</a>
-        <a href="#supporting">Our Journey</a>
-        <a href="#discover">Discover Stories</a>
-        <a href="#footer">Contact Us</a>
-    </div>
-
-    <!-- Button to open the navigation menu -->
-    <button class="open-btn" onclick="openNav()">&#9776;</button>
-
-    <!-- Main Section -->
+   <!-- Main Section -->
     <section class="main-section" id="main">
         <div>
             <h1>Every Story Has a Beginning</h1>
             <p>Join us as we explore the narratives that inspire, empower, and connect us all.</p>
-            <a href="#learn-more" class="btn">Start Your Journey</a>
+            <div class="btn">
+            <%= link_to "Learn more", about_path %>
+            </div>
         </div>
     </section>
 
@@ -32,10 +22,7 @@
     <section class="discover-section" id="discover">
         <h2>Discover New Stories</h2>
         <p>Explore a world of stories from different cultures, perspectives, and times. Each story has a lesson to share and a life to inspire.</p>
-        <a href="#discover-more" class="btn">Learn More</a>
+        <%= link_to "Learn more", about_path %>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <p>&copy; 2024 Stories. All rights reserved. Let your story be heard.</p>
-    </footer>
+
